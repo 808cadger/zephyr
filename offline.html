@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zephyr — Offline</title>
+  <meta name="theme-color" content="#06B6D4">
+  <style>
+    body {
+      margin: 0; min-height: 100vh;
+      background: #0A0F1E;
+      color: #F3F4F6;
+      font-family: system-ui, -apple-system, sans-serif;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+    .logo { font-size: 3.5rem; margin-bottom: 1.2rem; }
+    h1 { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; color: #06B6D4; }
+    p  { font-size: 0.9rem; color: #9CA3AF; max-width: 28ch; line-height: 1.6; }
+    button {
+      margin-top: 1.8rem;
+      padding: 0.75rem 1.8rem;
+      background: #06B6D4; color: #000;
+      font-weight: 700; font-size: 0.93rem;
+      border: none; border-radius: 10px; cursor: pointer;
+    }
+    button:active { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="logo">⚡</div>
+  <h1>You're offline</h1>
+  <p>Zephyr is cached and ready — reconnect to browse new apps.</p>
+  <button onclick="window.location.reload()">Try again</button>
+</body>
+</html>

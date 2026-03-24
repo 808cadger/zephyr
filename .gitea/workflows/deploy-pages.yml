@@ -1,0 +1,54 @@
+name: Deploy Zephyr PWA to Codeberg Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate required files
+        run: |
+          echo "Validating Zephyr PWA files..."
+          for f in index.html manifest.json sw.js offline.html apps.json widget.js icons/icon-192.png icons/icon-512.png; do
+            [ -f "$f" ] || { echo "MISSING: $f"; exit 1; }
+          done
+          echo "All files present ✓"
+
+      - name: Lint manifest
+        run: |
+          python3 -c "
+          import json, sys
+          with open('manifest.json') as f:
+            m = json.load(f)
+          required = ['name','short_name','start_url','scope','display','icons','theme_color']
+          missing = [k for k in required if k not in m]
+          if missing:
+            print('manifest.json missing:', missing); sys.exit(1)
+          print('manifest.json valid ✓')
+          "
+
+      - name: Prepare www output
+        run: |
+          mkdir -p www/icons
+          cp index.html manifest.json sw.js offline.html apps.json widget.js www/
+          cp icons/icon-192.png icons/icon-512.png www/icons/
+          # Stamp build time into sw.js for cache busting
+          BUILD_TS=$(date -u +%Y%m%d%H%M%S)
+          sed -i "s/zephyr-v1/zephyr-v1-${BUILD_TS}/" www/sw.js
+          echo "Built at ${BUILD_TS} ✓"
+
+      - name: Deploy to Codeberg Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./www
+          publish_branch: pages
+          force_orphan: true
+          user_name: cadger808
+          user_email: cadger808@codeberg.org
+          commit_message: "deploy: zephyr pwa ${{ github.sha }}"

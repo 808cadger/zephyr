@@ -1,0 +1,93 @@
+{
+  "version": "2.0",
+  "updated": "2026-03-23",
+  "network": "zephyr",
+  "distributor": "cadger808",
+  "apps": [
+    {
+      "id": "zephyr",
+      "name": "Zephyr",
+      "tagline": "The free app store — install everything from here",
+      "description": "Zephyr is the open distribution network. Install any app instantly, share with anyone, get silent updates forever. No app store. No fees. No gatekeeping.",
+      "category": "Utilities",
+      "icon": "https://cadger808.codeberg.page/zephyr/icons/icon-192.png",
+      "pwa": "https://cadger808.codeberg.page/zephyr",
+      "apk": "https://codeberg.org/cadger808/zephyr/releases",
+      "safety": "safe",
+      "developer": "cadger808",
+      "featured": true,
+      "color": "#06B6D4",
+      "self": true
+    },
+    {
+      "id": "glowai",
+      "name": "GlowAI",
+      "tagline": "AI skin analysis & beauty advisor",
+      "description": "Scan your skin with Claude Vision AI. Get personalized routines, track progress, and chat with your AI esthetician.",
+      "category": "Health",
+      "icon": "https://cadger808.codeberg.page/glowai/icons/icon-192.png",
+      "pwa": "https://cadger808.codeberg.page/glowai",
+      "apk": "https://codeberg.org/cadger808/glowai/releases",
+      "safety": "safe",
+      "developer": "cadger808",
+      "featured": true,
+      "color": "#C4788A"
+    },
+    {
+      "id": "archertravel",
+      "name": "ArcherTravel",
+      "tagline": "AI travel booking & Claude Vision ID",
+      "description": "Book travel, scan passports and visas with Claude Vision, and get real-time AI travel advice.",
+      "category": "Travel",
+      "icon": "https://cadger808.codeberg.page/archertravel/icons/icon-192.png",
+      "pwa": "https://cadger808.codeberg.page/archertravel",
+      "apk": "https://codeberg.org/cadger808/archertravel/releases",
+      "safety": "safe",
+      "developer": "cadger808",
+      "featured": true,
+      "color": "#6366F1"
+    },
+    {
+      "id": "courtaide",
+      "name": "CourtAide",
+      "tagline": "AI legal assistant & pro se court help",
+      "description": "Navigate the legal system without a lawyer. AI-powered document drafting, case research, and court prep.",
+      "category": "Legal",
+      "icon": "https://cadger808.codeberg.page/courtaide/icons/icon-192.png",
+      "pwa": "https://cadger808.codeberg.page/courtaide",
+      "apk": "https://codeberg.org/cadger808/courtaide/releases",
+      "safety": "safe",
+      "developer": "cadger808",
+      "featured": true,
+      "color": "#F59E0B"
+    },
+    {
+      "id": "farmsense",
+      "name": "FarmSense",
+      "tagline": "AI farm monitoring & crop management",
+      "description": "Monitor crops, track soil health, and get AI-powered planting recommendations tailored to your land.",
+      "category": "Agriculture",
+      "icon": "https://cadger808.codeberg.page/farmsense/icons/icon-192.png",
+      "pwa": "https://cadger808.codeberg.page/farmsense",
+      "apk": "https://codeberg.org/cadger808/farmsense/releases",
+      "safety": "safe",
+      "developer": "cadger808",
+      "featured": true,
+      "color": "#22C55E"
+    },
+    {
+      "id": "time-save-shopping",
+      "name": "Time-Save Shopping",
+      "tagline": "AI grocery & shopping assistant",
+      "description": "Build smart shopping lists, compare prices, and get AI meal planning. Save time every week.",
+      "category": "Lifestyle",
+      "icon": "https://cadger808.codeberg.page/time-save-shopping/icons/icon-192.png",
+      "pwa": "https://cadger808.codeberg.page/time-save-shopping",
+      "apk": "https://codeberg.org/cadger808/time-save-shopping/releases",
+      "safety": "safe",
+      "developer": "cadger808",
+      "featured": true,
+      "color": "#EC4899"
+    }
+  ]
+}
