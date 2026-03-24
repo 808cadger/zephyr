@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cadger808.codeberg.page/zephyr/sitemap.xml

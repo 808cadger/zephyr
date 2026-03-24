@@ -1,7 +1,7 @@
 {
   "appId": "com.cadger808.zephyr",
   "appName": "Zephyr",
-  "webDir": ".",
+  "webDir": "www",
   "server": {
     "androidScheme": "https"
   },
