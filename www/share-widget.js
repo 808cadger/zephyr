@@ -6,7 +6,7 @@ const ZephyrShare = (() => {
   const DEFAULT_CONTEXT = {
     name: 'Zephyr',
     url: 'https://cadger808.codeberg.page/zephyr',
-    text: 'No Play Store. No Apple tax. Just free apps — install in one tap 👇',
+    text: 'Open the Zephyr app network and install independent apps directly.',
     icon: './icons/icon-192.png'
   };
 
@@ -140,15 +140,15 @@ const ZephyrShare = (() => {
 
   function smsShare(overrideContext) {
     const ctx = overrideContext || context;
-    const msg = encodeURIComponent(`Your neighbor just sent you a free app 👇\nNo Play Store needed — takes 10 seconds:\n\n${ctx.url}\n\n(${ctx.name} — powered by Zephyr ⚡)`);
+    const msg = encodeURIComponent(`Someone sent you an app through Zephyr ⚡\nOpen it here:\n\n${ctx.url}\n\n(${ctx.name})`);
     window.location.href = `sms:?body=${msg}`;
   }
 
   function emailShare(overrideContext) {
     const ctx = overrideContext || context;
-    const subject = encodeURIComponent(`${ctx.name} — free app, no Play Store needed`);
+    const subject = encodeURIComponent(`${ctx.name} — shared via Zephyr`);
     const body = encodeURIComponent(
-      `Hey,\n\nI've been using ${ctx.name} and thought you'd want it too.\n\n"${ctx.text}"\n\nInstall free in under 10 seconds — no Play Store, no Apple App Store, no account:\n👉 ${ctx.url}\n\nIt's part of Zephyr — a free open app network with no fees and no gatekeeping.\nGet all the apps: https://cadger808.codeberg.page/zephyr\n\n⚡ Powered by Zephyr`
+      `Hey,\n\nI thought you should have this:\n\n${ctx.name}\n"${ctx.text}"\n\nOpen it here:\n👉 ${ctx.url}\n\nIt’s part of Zephyr, an open app network for direct installs.\nGet the full network: https://cadger808.codeberg.page/zephyr`
     );
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
   }

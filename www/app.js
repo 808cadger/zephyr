@@ -1,5 +1,4 @@
 // app.js — Zephyr router, state, SW registration
-// Aloha from Pearl City! Privacy-first: zero data leaves this device.
 
 const ZephyrApp = (() => {
   // #ASSUMPTION: SW is supported; degrades gracefully if not

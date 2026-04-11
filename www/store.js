@@ -143,6 +143,8 @@ const ZephyrStore = (() => {
     const nonSelf = allApps.filter(a => !a.self);
     const el = document.getElementById('app-count');
     if (el) el.textContent = nonSelf.length;
+    const heroEl = document.getElementById('app-count-hero');
+    if (heroEl) heroEl.textContent = nonSelf.length;
   }
 
   function getApp(id) { return allApps.find(a => a.id === id); }

@@ -1,7 +1,7 @@
 {
   "name": "zephyr",
   "version": "2.0.0",
-  "description": "The free PWA app store — install, share, discover. No gatekeeping.",
+  "description": "The free PWA app store \u2014 install, share, discover. No gatekeeping.",
   "private": true,
   "scripts": {
     "sync": "npx cap sync android",
@@ -15,5 +15,9 @@
   },
   "devDependencies": {
     "@capacitor/cli": "^6.0.0"
+  },
+  "overrides": {
+    "picomatch": ">=4.0.2",
+    "brace-expansion": ">=2.0.1"
   }
 }

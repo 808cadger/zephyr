@@ -1,7 +1,6 @@
 // widget.js — Zephyr embed widget
 // Drop one <script> tag in ANY app and Zephyr lives there instantly.
 // Self-contained IIFE. No dependencies. No data sent anywhere.
-// Aloha from Pearl City! ⚡
 
 (function ZephyrWidget() {
   'use strict';

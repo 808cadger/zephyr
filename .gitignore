@@ -1,0 +1,16 @@
+node_modules/
+www/
+android/build/
+android/.gradle/
+android/app/build/
+android/.cxx/
+android/local.properties
+dist/
+dist-electron/
+*.log
+*.apk
+*.aab
+*.AppImage
+*.rpm
+.DS_Store
+Thumbs.db

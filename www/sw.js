@@ -1,18 +1,19 @@
 // Zephyr Service Worker — silent updates, offline-first, auto icon cache
-// Aloha from Pearl City!
 
-const CACHE_VERSION = 'zephyr-v1';
+const CACHE_VERSION = 'zephyr-v2';
 const APP_SHELL = [
   './',
   './index.html',
   './manifest.json',
   './offline.html',
   './app.js',
+  './apps.json',
   './store.js',
   './installer.js',
   './share-widget.js',
   './ambient.js',
   './settings.js',
+  './widget.js',
   './icons/icon-192.png',
   './icons/icon-512.png'
 ];
@@ -28,7 +29,7 @@ self.addEventListener('install', event => {
       try {
         const res = await fetch('./apps.json');
         const { apps } = await res.json();
-        // Auto-download GlowAI, FarmSense, and all icons — no user action needed
+        // Warm the icon cache so the catalog feels instant on repeat visits.
         const iconFetches = apps.map(async app => {
           try {
             const iconRes = await fetch(app.icon, { mode: 'cors' });
