@@ -1,5 +1,42 @@
 # Zephyr — Free App Store
 
+<!-- INSTALL-START -->
+## Install and run
+
+These instructions install and run `zephyr` from a fresh clone.
+
+### Clone
+```bash
+git clone https://github.com/808cadger/zephyr.git
+cd zephyr
+```
+
+### Web app
+```bash
+npm install
+npm run build
+python3 -m http.server 8080
+```
+
+### Android build/open
+```bash
+npm run sync
+npm run android
+```
+
+### Notes
+- Use Node.js 22 or newer for the current package set.
+- Android builds require Android Studio, a configured SDK, and Java 21 when Gradle is used.
+
+### AI/API setup
+- If the app has AI features, add the required provider key in the app settings or local `.env` file.
+- Browser-only apps store user-provided API keys on the local device unless a backend endpoint is configured.
+
+### License
+- Apache License 2.0. See [`LICENSE`](./LICENSE).
+<!-- INSTALL-END -->
+
+
 > The open PWA network. Install, share, and discover every app — no gatekeeping, no store, no fees. No data saved. Ever.
 
 [**PWA →**](https://cadger808.codeberg.page/zephyr) · [**Download APK →**](https://codeberg.org/cadger808/zephyr/releases) · [Codeberg](https://codeberg.org/cadger808/zephyr)
