@@ -1,5 +1,12 @@
 # Zephyr — Free App Store
 
+## Download Links
+
+- **iOS / iPhone:** Open the PWA in Safari: [Zephyr iOS install](https://808cadger.github.io/zephyr/) and choose **Share -> Add to Home Screen**.
+- **Android:** Download the latest APK from GitHub Releases: [Zephyr Android releases](https://github.com/808cadger/zephyr/releases/latest).
+- **Source download:** [Download the GitHub source ZIP](https://github.com/808cadger/zephyr/archive/refs/heads/main.zip).
+
+
 <!-- INSTALL-START -->
 ## Install and run
 
