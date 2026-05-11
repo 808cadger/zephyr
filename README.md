@@ -1,10 +1,35 @@
-# Zephyr — Free App Store
+# Zephyr
+
+[![Release](https://img.shields.io/github/v/release/808cadger/zephyr?include_prereleases&label=release)](https://github.com/808cadger/zephyr/releases)
+[![Last commit](https://img.shields.io/github/last-commit/808cadger/zephyr)](https://github.com/808cadger/zephyr/commits)
+[![License](https://img.shields.io/github/license/808cadger/zephyr)](https://github.com/808cadger/zephyr/blob/HEAD/LICENSE)
+![Platforms](https://img.shields.io/badge/platform-Web%2FPWA%2C%20Android-2563eb)
+
+Open PWA app-store hub for discovering, launching, and installing the app suite without gatekeeping.
+
+## Project Snapshot
+
+| Area | Details |
+|------|---------|
+| Primary use case | Open PWA app-store hub for discovering, launching, and installing the app suite without gatekeeping. |
+| Platforms | Web/PWA, Android |
+| Core stack | JavaScript, Capacitor, PWA, Android |
+| Review first | `www/index.html`, `index.html`, `android`, `capacitor.config.json`, `package.json` |
 
 ## Download Links
 
-- **iOS / iPhone:** Open the PWA in Safari: [Zephyr iOS install](https://808cadger.github.io/zephyr/) and choose **Share -> Add to Home Screen**.
-- **Android:** Download the latest APK from GitHub Releases: [Zephyr Android releases](https://github.com/808cadger/zephyr/releases/latest).
-- **Source download:** [Download the GitHub source ZIP](https://github.com/808cadger/zephyr/archive/refs/heads/main.zip).
+| Platform | Link |
+|----------|------|
+| iOS / iPhone | [Open the PWA in Safari](https://808cadger.github.io/zephyr/) and choose **Share -> Add to Home Screen** |
+| Android | [Download the latest APK from GitHub Releases](https://github.com/808cadger/zephyr/releases/latest) |
+| Source | [Download the GitHub source ZIP](https://github.com/808cadger/zephyr/archive/refs/heads/main.zip) |
+| Repository | [View on GitHub](https://github.com/808cadger/zephyr) |
+
+## Why This Repo Is Worth Reviewing
+
+- Distribution layer for the broader app portfolio.
+- PWA-first app discovery keeps installation low-friction.
+- Android build path supports native catalog distribution.
 
 
 <!-- INSTALL-START -->
