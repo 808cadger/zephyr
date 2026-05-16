@@ -1,5 +1,5 @@
 // store.js — Zephyr app catalog, auto-renders with cached icons
-// Privacy-first: apps.json fetched from Codeberg public API only, nothing tracked.
+// Privacy-first: apps.json is a static public catalog; nothing is tracked.
 
 const ZephyrStore = (() => {
   const APPS_URL = './apps.json';
@@ -64,6 +64,13 @@ const ZephyrStore = (() => {
         window.open(url, '_blank', 'noopener,noreferrer');
       });
     });
+    el.querySelectorAll('[data-source]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const url = link.dataset.source;
+        window.open(url, '_blank', 'noopener,noreferrer');
+      });
+    });
   }
 
   function buildCard(app) {
@@ -96,6 +103,7 @@ const ZephyrStore = (() => {
             Install Free
           </button>
           ${app.apk ? `<button class="btn-apk" data-apk="${escHtml(app.apk)}">APK</button>` : ''}
+          ${app.source ? `<button class="btn-apk" data-source="${escHtml(app.source)}">Source</button>` : ''}
         </div>
       </div>
     `;
@@ -151,12 +159,18 @@ const ZephyrStore = (() => {
   // Hardcoded fallback — shown if SW cache also misses (first load, no network)
   function getFallbackApps() {
     return [
+      { id: 'codefixer', name: 'CodeFixer', tagline: 'Catch coding mistakes before running code', category: 'Developer',
+        icon: './icons/icon-192.png', pwa: 'https://808cadger.github.io/CodeFixer/',
+        source: 'https://github.com/808cadger/CodeFixer', color: '#0F766E', featured: true },
       { id: 'glowai', name: 'GlowAI', tagline: 'AI skin analysis', category: 'Health',
-        icon: './icons/icon-192.png', pwa: 'https://cadger808.codeberg.page/glowai',
-        apk: 'https://codeberg.org/cadger808/glowai/releases', color: '#C4788A', featured: true },
+        icon: './icons/icon-192.png', pwa: 'https://808cadger.github.io/GlowAI/',
+        apk: 'https://github.com/808cadger/GlowAI/releases/latest', color: '#C4788A', featured: true },
       { id: 'farmsense', name: 'FarmSense', tagline: 'AI crop monitoring', category: 'Agriculture',
-        icon: './icons/icon-192.png', pwa: 'https://cadger808.codeberg.page/farmsense',
-        apk: 'https://codeberg.org/cadger808/farmsense/releases', color: '#22C55E', featured: true }
+        icon: './icons/icon-192.png', pwa: 'https://808cadger.github.io/FarmSense/',
+        apk: 'https://github.com/808cadger/FarmSense/releases/latest', color: '#22C55E', featured: true },
+      { id: 'courtaide', name: 'CourtAide', tagline: 'AI legal assistant', category: 'Legal',
+        icon: './icons/icon-192.png', pwa: 'https://808cadger.github.io/courtaide/',
+        apk: 'https://github.com/808cadger/courtaide/releases/latest', color: '#F59E0B', featured: true }
     ];
   }
 

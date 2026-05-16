@@ -6,9 +6,9 @@
 (function ZephyrWidget() {
   'use strict';
 
-  const REGISTRY_URL = 'https://cadger808.codeberg.page/zephyr/apps.json';
-  const ZEPHYR_URL   = 'https://cadger808.codeberg.page/zephyr';
-  const ZEPHYR_ICON  = 'https://cadger808.codeberg.page/zephyr/icons/icon-192.png';
+  const REGISTRY_URL = 'https://808cadger.github.io/zephyr/apps.json';
+  const ZEPHYR_URL   = 'https://808cadger.github.io/zephyr/';
+  const ZEPHYR_ICON  = 'https://808cadger.github.io/zephyr/icons/icon-192.png';
 
   // Don't double-init
   if (document.getElementById('zephyr-widget-root')) return;

@@ -91,14 +91,22 @@ Zephyr **never saves** your usage data, installed apps list, or any personal inf
 
 ## Apps in the catalog
 
-| App | What it does |
-|-----|-------------|
-| **GlowAI** | AI skin analysis — scan, routine, progress |
-| **ArcherTravel** | AI travel booking + Claude Vision ID verify |
-| **CourtAide** | AI legal assistant for pro se court filings |
-| **FarmSense** | AI farm monitoring + crop management |
+Zephyr now tracks the full public app suite, including the new developer-tool app.
 
-All apps: no account, API key on-device only, full PWA + Android APK available.
+| Category | Apps |
+|-----|-------------|
+| Developer | CodeFixer |
+| Health | GlowAI |
+| Automotive | AutoIQ, RepairPro, AutoRepairIQ Pro |
+| Legal | CourtAide |
+| Agriculture | FarmSense |
+| Travel | Archer Travel, TravelGuide LeiWay, Makoa Wave |
+| Shopping | time~save~shopping, Grocery Store App |
+| Security | HaloGuard, TrustReply |
+| Productivity | LifeOS, simper~decide |
+| Home/Food/Safety | RepairIQ, TacoMap, Construction Safety AI |
+
+All user-facing apps are linked to their PWA or repository, plus APK/releases when available.
 
 ---
 
