@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  static-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --check app.js
+      - run: node --check installer.js
+      - run: node --check store.js
+      - run: node --check widget.js
+      - run: node --check sw.js
+      - run: node --check www/installer.js
+      - run: node --check www/store.js
+      - run: node --check www/widget.js
+      - run: node -e "const fs=require('fs'); const a=JSON.parse(fs.readFileSync('apps.json')); const b=JSON.parse(fs.readFileSync('www/apps.json')); if (JSON.stringify(a)!==JSON.stringify(b)) throw new Error('apps.json and www/apps.json are out of sync'); if (a.apps.length < 20) throw new Error('catalog is missing apps'); console.log('catalog ok:', a.apps.length)"
