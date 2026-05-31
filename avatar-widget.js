@@ -214,7 +214,7 @@
           'anthropic-dangerous-direct-browser-calls': 'true'
         },
         body: JSON.stringify({
-          model: window.SWAvatarModel || 'claude-haiku-4-5',
+          model: window.SWAvatarModel || 'claude-haiku-4-5-20251001',
           max_tokens: 380,
           system: systemPrompt(skill, p),
           messages: [{ role: 'user', content: clean(text).slice(0, MAX_INPUT) }]
